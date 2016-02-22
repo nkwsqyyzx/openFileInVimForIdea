@@ -1,36 +1,31 @@
 <idea-plugin version="2">
-    <id>com.your.company.unique.plugin.id</id>
-    <name>Plugin display name here</name>
-    <version>1.0</version>
-    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+    <id>space.wsq.www.vim_action</id>
+    <name>open in Vim</name>
+    <version>1.1</version>
+    <vendor email="nkwsqyyzx@gmail.com" url="http://blog.wsq.space">wsq</vendor>
 
     <description><![CDATA[
-      Enter short description for your plugin here.<br>
-      <em>most HTML tags may be used</em>
+      Open current file in vim server(use /usr/local/bin/gvim).<br>
     ]]></description>
 
     <change-notes><![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
+      First release.<br>
     ]]>
     </change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="141.0"/>
-
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
-    <!-- uncomment to enable plugin in all products
-    <depends>com.intellij.modules.lang</depends>
-    -->
+    <idea-version since-build="123.72"/>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
     </extensions>
+
     <actions>
         <!-- Add your actions here -->
-        <action id="openInVim" class="openInVim" text="openInVim" description="open current file in vim">
-            <add-to-group group-id="FileMenu" anchor="last"/>
+        <action id="vim_action.openInVim"
+                class="space.wsq.www.vim_action.openInVim"
+                text="open file in Vim"
+                description="Open in vim">
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift Z"/>
         </action>
     </actions>
